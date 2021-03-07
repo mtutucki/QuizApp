@@ -4,3 +4,24 @@
 body {
     background-image: url("../img/bgcLarge.jpg");
 }
+
+.quiz {
+    .question {
+        font-size: 1.2rem;
+    }
+
+    .btn {
+        font-size: .8rem;
+        width: 29vw;
+    }
+
+    .chknxtBtn {
+        font-size: .8rem;
+    }
+
+    .choosedBtn {
+        font-size: .8rem;
+        width: 29vw;
+        background-color: rgba(60, 70, 105, 0.815);
+    }
+}

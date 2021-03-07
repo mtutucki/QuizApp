@@ -12,7 +12,7 @@ body {
 }
 
 .quiz .question {
-  font-size: 1rem;
+  font-size: 1.3rem;
   padding: 0 .33rem;
 }
 
@@ -23,14 +23,21 @@ body {
 }
 
 .quiz .btn {
-  font-size: .6rem;
+  font-size: .7rem;
   width: 29vw;
   margin-bottom: .83rem;
 }
 
 .quiz .chknxtBtn {
-  font-size: .6rem;
+  font-size: .9rem;
   width: 59vw;
   padding: .66rem;
+}
+
+.quiz .choosedBtn {
+  font-size: .7rem;
+  margin-bottom: .83rem;
+  width: 29vw;
+  background-color: rgba(60, 70, 105, 0.815);
 }
 /*# sourceMappingURL=medium.css.map */

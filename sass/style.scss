@@ -65,8 +65,8 @@ body {
     // quiz questions
     .question {
         color: $white;
-        margin-bottom: .8rem;
-        font-size: .66rem;
+        margin-bottom: .9rem;
+        font-size: .9rem;
         text-transform: uppercase;
         letter-spacing: 1px;
         text-shadow: 0px 1px 2px rgba(25, 25, 50, 0.8);
@@ -75,7 +75,7 @@ body {
     //style for anwers, check and next buttons
     .btn,
     .chknxtBtn {
-        font-size: .46rem;
+        font-size: .9rem;
         width: 80vw;
         height: 8vh;
         margin: .16rem;
@@ -87,6 +87,21 @@ body {
         text-transform: uppercase;
         transition: font-weight .3s, border-top.3s, border-right .3s, border-bottom .3s, border-left .3s, border-radius .6s, background-color.3s, letter-spacing .3s, cursor .3s;
     }
+
+    .choosedBtn {
+        font-size: .9rem;
+        width: 80vw;
+        height: 8vh;
+        margin: .16rem;
+        color: $white;
+        background-color: rgba(13, 19, 34, 0.4);
+        border: none;
+        border-radius: .1rem;
+        text-shadow: 1px 1px 4px black;
+        text-transform: uppercase;
+        background-color: rgba(60, 70, 105, 0.815);
+    }
+
 
     // style for anwers buttons
     .btn:hover {
@@ -103,6 +118,8 @@ body {
 
     // styles for check and next buttons 
     .chknxtBtn {
+        justify-content: center;
+        align-items: center;
         background-color: $checkAndNextBtnBgc;
         transition: font-weight .3s, letter-spacing .3s, cursor .3s, animation .3s;
     }
@@ -129,6 +146,8 @@ body {
         }
 
     }
+
+
 
     // check button has to be visible first
     .checkBtn {
