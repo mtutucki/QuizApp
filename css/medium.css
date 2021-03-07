@@ -4,12 +4,33 @@ body {
 
 .quiz {
   top: 40%;
-  width: 80%;
-  height: 30%;
-  border: 1px solid black;
-  border-radius: 20px;
-  -webkit-box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.8);
-          box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.8);
-  background-color: rgba(3, 2, 2, 0.473);
+  width: 85vw;
+}
+
+.quiz .quizWrapper {
+  top: 45%;
+}
+
+.quiz .question {
+  font-size: 1rem;
+  padding: 0 .33rem;
+}
+
+.quiz .anwers {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.quiz .btn {
+  font-size: .6rem;
+  width: 29vw;
+  margin-bottom: .83rem;
+}
+
+.quiz .chknxtBtn {
+  font-size: .6rem;
+  width: 59vw;
+  padding: .66rem;
 }
 /*# sourceMappingURL=medium.css.map */

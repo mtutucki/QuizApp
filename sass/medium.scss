@@ -1,15 +1,50 @@
 //768px
 
+// set higher resolution photo for background
 body {
     background-image: url("../img/bgcMedium.jpg");
 }
 
+//main quiz class
 .quiz {
     top: 40%;
-    width: 80%;
-    height: 30%;
-    border: 1px solid black;
-    border-radius: 20px;
-    box-shadow: 2px 3px 5px rgba(0, 0, 0, .8);
-    background-color: rgba(3, 2, 2, 0.473);
+    width: 85vw;
+
+    //wrapper for questions and anwers
+    .quizWrapper {
+        top: 45%;
+    }
+
+    // quiz questions
+    .question {
+        font-size: 1rem;
+        padding: 0 .33rem;
+    }
+
+    // set inline-flex style anwer buttons
+    .anwers {
+        display: inline-flex;
+    }
+
+    // change some properties for anwer buttons
+    .btn {
+        font-size: .6rem;
+        width: 29vw;
+        margin-bottom: .83rem;
+    }
+
+    //change some properties for check and next buttons
+    .chknxtBtn {
+        font-size: .6rem;
+        width: 59vw;
+        padding: .66rem;
+    }
+
+
+
+
+
+
+
+
 }
