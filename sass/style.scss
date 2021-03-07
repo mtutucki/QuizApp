@@ -118,7 +118,12 @@ body {
         transition: font-weight .3s, letter-spacing .3s, cursor .3s, animation .3s;
     }
 
-    .chknxtBtn:hover {
+    // check button has to be visible first
+    .checkBtn {
+        display: block;
+    }
+
+    .checkBtn:hover {
         font-weight: bold;
         letter-spacing: 2px;
         cursor: pointer;
@@ -141,17 +146,26 @@ body {
 
     }
 
-
-
-    // check button has to be visible first
-    .checkBtn {
-        display: block;
-    }
-
     // next buttons display none until user click check button
     .nextBtn {
         display: none;
+        animation: nextButton .6s linear;
+        transition: background-color .3s, cursor .3s;
     }
 
+    .nextBtn:hover {
+        background-color: rgba(17, 51, 78, 0.541);
+        cursor: pointer;
+    }
+
+    @keyframes nextButton {
+        from {
+            width: 0%;
+        }
+
+        to {
+            width: 98%;
+        }
+    }
 
 }

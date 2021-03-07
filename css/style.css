@@ -122,7 +122,11 @@ body {
   transition: font-weight .3s, letter-spacing .3s, cursor .3s, animation .3s, -webkit-animation .3s;
 }
 
-.quiz .chknxtBtn:hover {
+.quiz .checkBtn {
+  display: block;
+}
+
+.quiz .checkBtn:hover {
   font-weight: bold;
   letter-spacing: 2px;
   cursor: pointer;
@@ -154,11 +158,34 @@ body {
   }
 }
 
-.quiz .checkBtn {
-  display: block;
-}
-
 .quiz .nextBtn {
   display: none;
+  -webkit-animation: nextButton .6s linear;
+          animation: nextButton .6s linear;
+  -webkit-transition: background-color .3s, cursor .3s;
+  transition: background-color .3s, cursor .3s;
+}
+
+.quiz .nextBtn:hover {
+  background-color: rgba(17, 51, 78, 0.541);
+  cursor: pointer;
+}
+
+@-webkit-keyframes nextButton {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 98%;
+  }
+}
+
+@keyframes nextButton {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 98%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
