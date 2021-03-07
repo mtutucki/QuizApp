@@ -2,7 +2,7 @@ let $question;
 let $anwersButtons;
 let $firstAnswerBtn;
 let $secondAnsweBtn;
-let $counter =4;
+let $counter =0;
 let $checkBtn;
 let $nextBtn;
 let $points = 0;
@@ -67,7 +67,6 @@ const endGameButton = () => {
         $points = 0;
 }
 
-
 const resetButtons = () => {
     $firstAnswerBtn.classList.remove("choosedBtn");
     $firstAnswerBtn.classList.add("btn");
@@ -81,7 +80,6 @@ const resetButtons = () => {
     $checkBtn.style.display = "block";
     $nextBtn.innerHTML = "dalej";
 }
-
 
 const whichButtonWasClicked = (e) => {
         if (e.target.closest("button").classList.contains("answerFirst") ){
@@ -110,6 +108,8 @@ const checkAnswer = () => {
         $secondAnsweBtn.style.backgroundColor = "rgba(201, 18, 18, 0.582)";
         showNextQuestion();
     }
+
+    
 }
 
 const showNextQuestion = () => {

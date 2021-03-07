@@ -64,10 +64,14 @@ body {
           transform: translate(-50%, -50%);
 }
 
+.quiz .anwers {
+  display: block;
+}
+
 .quiz .question {
   color: rgba(255, 255, 255, 0.863);
   margin-bottom: .5rem;
-  font-size: .9rem;
+  font-size: .7rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   text-shadow: 2px 1px rgba(25, 25, 50, 0.8);
@@ -76,7 +80,7 @@ body {
 .quiz .btn,
 .quiz .chknxtBtn,
 .quiz .choosedBtn {
-  font-size: .7rem;
+  font-size: .5rem;
   width: 80vw;
   height: 8vh;
   margin: .3rem;
@@ -130,8 +134,8 @@ body {
   font-weight: bold;
   letter-spacing: 2px;
   cursor: pointer;
-  -webkit-animation: animForCheckBtn 2.5s infinite;
-          animation: animForCheckBtn 2.5s infinite;
+  -webkit-animation: animForCheckBtn 1.3s infinite;
+          animation: animForCheckBtn 1.3s infinite;
 }
 
 @-webkit-keyframes animForCheckBtn {

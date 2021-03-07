@@ -62,11 +62,15 @@ body {
         transform: translate(-50%, -50%);
     }
 
+    .anwers {
+        display: block;
+    }
+
     // quiz questions
     .question {
         color: $white;
         margin-bottom: .5rem;
-        font-size: .9rem;
+        font-size: .7rem;
         text-transform: uppercase;
         letter-spacing: 1px;
         text-shadow: $textShadow;
@@ -76,7 +80,7 @@ body {
     .btn,
     .chknxtBtn,
     .choosedBtn {
-        font-size: .7rem;
+        font-size: .5rem;
         width: 80vw;
         height: 8vh;
         margin: .3rem;
@@ -127,7 +131,7 @@ body {
         font-weight: bold;
         letter-spacing: 2px;
         cursor: pointer;
-        animation: animForCheckBtn 2.5s infinite;
+        animation: animForCheckBtn 1.3s infinite;
 
     }
 

@@ -1,1 +1,12 @@
-/* No CSS *//*# sourceMappingURL=small.css.map */
+:root {
+  font-size: 36px;
+}
+
+.quiz {
+  height: 48vh;
+}
+
+.quiz .question {
+  padding-top: .1rem;
+}
+/*# sourceMappingURL=small.css.map */
