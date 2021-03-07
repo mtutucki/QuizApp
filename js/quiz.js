@@ -2,9 +2,11 @@ let $question;
 let $anwersButtons;
 let $firstAnswerBtn;
 let $secondAnsweBtn;
-let $counter = 4;
-let $anwerCounter = 0;
+let $counter = 0;
 let $checkBtn;
+let $points = 0;
+
+
 const prepareDOMElements = () => {
     $question = document.body.querySelector(".question"); 
     $firstAnswerBtn = document.body.querySelector(".answerFirst");
@@ -15,6 +17,7 @@ const prepareDOMElements = () => {
 
 const prepareDOMEvents = () => {
     $anwersButtons.addEventListener("click", whichButtonWasClicked);
+    $checkBtn.addEventListener("click", checkAnswer);
 }
 
 const startGame = () => {
@@ -33,11 +36,33 @@ const startGame = () => {
 
     const questions = [firstQuiz,secondQuiz,thirdQuiz,fourthQuiz,fifthQuiz];
 
-    $question.innerHTML = questions[0].question;
-    $firstAnswerBtn.innerHTML = questions[0].firstAnswer;
-    $secondAnsweBtn.innerHTML = questions[0].secondAnswer;
-
+    for (let i=0; i<=$counter; i++){
+        resetButtons();
+        $question.innerHTML = questions[i].question;
+        $firstAnswerBtn.innerHTML = questions[i].firstAnswer;
+        $secondAnsweBtn.innerHTML = questions[i].secondAnswer;
+        if ($counter == questions.length) {
+            endGame();
+        }
+    }
 }
+
+const endGame = () => {
+            $question.innerHTML = `Twój wynik to: ${$points} / 5`;
+            $firstAnswerBtn.style.display = "none";
+            $secondAnsweBtn.style.display = "none";
+            $checkBtn.style.display = "none";
+}
+
+
+
+const resetButtons = () => {
+    $firstAnswerBtn.classList.remove("choosedBtn");
+    $firstAnswerBtn.classList.add("btn");
+    $secondAnsweBtn.classList.remove("choosedBtn");
+    $secondAnsweBtn.classList.add("btn");
+}
+
 
 const whichButtonWasClicked = (e) => {
         if (e.target.closest("button").classList.contains("answerFirst") ){
@@ -51,8 +76,17 @@ const whichButtonWasClicked = (e) => {
             e.target.closest("button").classList.toggle("btn");
             $firstAnswerBtn.classList.remove("choosedBtn");
             $firstAnswerBtn.classList.add("btn");
-
         }
+}
+
+const checkAnswer = () => {
+    if ($firstAnswerBtn.classList.contains("choosedBtn")){
+        $counter++;
+        $points++;
+    }
+    else if ($secondAnsweBtn.classList.contains("choosedBtn")){
+        $counter++;
+    }
 }
 
 

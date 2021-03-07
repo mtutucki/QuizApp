@@ -27,7 +27,8 @@ body {
     }
 
     // change some properties for anwer buttons
-    .btn {
+    .btn,
+    .choosedBtn {
         font-size: .7rem;
         width: 29vw;
         margin-bottom: .83rem;
@@ -40,12 +41,7 @@ body {
         padding: .66rem;
     }
 
-    .choosedBtn {
-        font-size: .7rem;
-        margin-bottom: .83rem;
-        width: 29vw;
-        background-color: rgba(60, 70, 105, 0.815);
-    }
+
 
 
 

@@ -52,7 +52,7 @@ body {
     align-items: center;
     border: 1px solid black;
     border-radius: .6rem;
-    box-shadow: 2px 3px 5px rgba(0, 0, 0, .8);
+    box-shadow: $quizBoxShadow;
 
     //wrapper for question and buttons
     .quizWrapper {
@@ -65,41 +65,34 @@ body {
     // quiz questions
     .question {
         color: $white;
-        margin-bottom: .9rem;
+        margin-bottom: .5rem;
         font-size: .9rem;
         text-transform: uppercase;
         letter-spacing: 1px;
-        text-shadow: 0px 1px 2px rgba(25, 25, 50, 0.8);
+        text-shadow: $textShadow;
     }
 
     //style for anwers, check and next buttons
     .btn,
-    .chknxtBtn {
-        font-size: .9rem;
+    .chknxtBtn,
+    .choosedBtn {
+        font-size: .7rem;
         width: 80vw;
         height: 8vh;
-        margin: .16rem;
+        margin: .3rem;
         color: $white;
-        background-color: rgba(13, 19, 34, 0.4);
+        background-color: $anwersButtonsBgc;
         border: none;
         border-radius: .1rem;
-        text-shadow: 1px 1px 4px black;
+        text-shadow: $textShadow;
         text-transform: uppercase;
         transition: font-weight .3s, border-top.3s, border-right .3s, border-bottom .3s, border-left .3s, border-radius .6s, background-color.3s, letter-spacing .3s, cursor .3s;
     }
 
+    //when user clicked anwers
     .choosedBtn {
-        font-size: .9rem;
-        width: 80vw;
-        height: 8vh;
-        margin: .16rem;
-        color: $white;
-        background-color: rgba(13, 19, 34, 0.4);
-        border: none;
-        border-radius: .1rem;
-        text-shadow: 1px 1px 4px black;
-        text-transform: uppercase;
-        background-color: rgba(60, 70, 105, 0.815);
+        background-color: $chooseAnswerBgc;
+        cursor: pointer;
     }
 
 
@@ -118,6 +111,7 @@ body {
 
     // styles for check and next buttons 
     .chknxtBtn {
+        margin-top: .6rem;
         justify-content: center;
         align-items: center;
         background-color: $checkAndNextBtnBgc;

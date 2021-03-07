@@ -10,7 +10,8 @@ body {
         font-size: 1.2rem;
     }
 
-    .btn {
+    .btn,
+    .choosedBtn {
         font-size: .8rem;
         width: 29vw;
     }
@@ -19,9 +20,5 @@ body {
         font-size: .8rem;
     }
 
-    .choosedBtn {
-        font-size: .8rem;
-        width: 29vw;
-        background-color: rgba(60, 70, 105, 0.815);
-    }
+
 }

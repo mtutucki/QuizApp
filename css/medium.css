@@ -22,7 +22,8 @@ body {
   display: inline-flex;
 }
 
-.quiz .btn {
+.quiz .btn,
+.quiz .choosedBtn {
   font-size: .7rem;
   width: 29vw;
   margin-bottom: .83rem;
@@ -32,12 +33,5 @@ body {
   font-size: .9rem;
   width: 59vw;
   padding: .66rem;
-}
-
-.quiz .choosedBtn {
-  font-size: .7rem;
-  margin-bottom: .83rem;
-  width: 29vw;
-  background-color: rgba(60, 70, 105, 0.815);
 }
 /*# sourceMappingURL=medium.css.map */
