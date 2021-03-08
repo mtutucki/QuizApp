@@ -6,18 +6,22 @@ body {
 }
 
 .quiz {
+    height: 45vh;
+
     .question {
         font-size: 1rem;
     }
 
     .btn,
-    .choosedBtn {
+    .choosedBtn,
+    .chknxtBtn {
         font-size: .6rem;
+        height: 10vh;
         width: 29vw;
     }
 
     .chknxtBtn {
-        font-size: .6rem;
+        width: 98%;
     }
 
 

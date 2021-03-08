@@ -45,7 +45,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 95vw;
-    height: 50vh;
+    height: 49vh;
     background-color: $quizShadowBgc;
     justify-content: center;
     text-align: center;
@@ -87,7 +87,10 @@ body {
         margin: .3rem;
         color: $white;
         background-color: $anwersButtonsBgc;
-        border: none;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        border-left: none;
+        border-right: none;
         border-radius: .1rem;
         text-shadow: $textShadow;
         text-transform: uppercase;
@@ -173,5 +176,22 @@ body {
         }
     }
 
+}
 
+@media(min-width: 560px) {
+    .quiz {
+        height: 60vh;
+    }
+}
+
+@media (orientation: landscape) {
+    .quiz {
+
+        .btn,
+        .chknxtBtn,
+        .choosedBtn {
+            margin-top: .3rem;
+            height: 9vh;
+        }
+    }
 }

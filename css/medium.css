@@ -9,11 +9,11 @@ body {
 }
 
 .quiz .quizWrapper {
-  top: 45%;
+  top: 50%;
 }
 
 .quiz .question {
-  font-size: .9rem;
+  font-size: 1rem;
   padding: 0 .33rem;
 }
 
@@ -29,15 +29,29 @@ body {
 
 .quiz .btn,
 .quiz .choosedBtn {
-  font-size: .5rem;
-  width: 29vw;
+  font-size: .8rem;
+  padding: .1rem;
+  width: 32vw;
+  height: 9vh;
   margin-bottom: .83rem;
 }
 
 .quiz .chknxtBtn {
   font-size: .7rem;
   line-height: 50%;
-  width: 59vw;
+  width: 96%;
   padding: .66rem;
+}
+
+@media (min-width: 800px) and (max-height: 500px) {
+  .quiz {
+    top: 50%;
+    height: 85vh;
+  }
+  .quiz .btn,
+  .quiz .checkBtn,
+  .quiz .nextBtn {
+    height: 18vh;
+  }
 }
 /*# sourceMappingURL=medium.css.map */

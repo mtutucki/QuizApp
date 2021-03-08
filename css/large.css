@@ -2,17 +2,23 @@ body {
   background-image: url("../img/bgcLarge.jpg");
 }
 
+.quiz {
+  height: 45vh;
+}
+
 .quiz .question {
   font-size: 1rem;
 }
 
 .quiz .btn,
-.quiz .choosedBtn {
+.quiz .choosedBtn,
+.quiz .chknxtBtn {
   font-size: .6rem;
+  height: 10vh;
   width: 29vw;
 }
 
 .quiz .chknxtBtn {
-  font-size: .6rem;
+  width: 98%;
 }
 /*# sourceMappingURL=large.css.map */
