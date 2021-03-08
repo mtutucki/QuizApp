@@ -63,7 +63,8 @@ body {
     }
 
     .anwers {
-        display: block;
+        display: inline-flex;
+        flex-direction: column;
     }
 
     // quiz questions

@@ -25,6 +25,7 @@ body {
     // set inline-flex style anwer buttons
     .anwers {
         display: inline-flex;
+        flex-direction: row;
     }
 
     // change some properties for anwer buttons
