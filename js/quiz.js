@@ -6,7 +6,8 @@ let $counter =0;
 let $checkBtn;
 let $nextBtn;
 let $points = 0;
-
+const $goodAnswerColor = "rgba(11, 175, 60, 0.815)";
+const $badAnswerColor = "rgba(201, 18, 18, 0.582)";
 
 const prepareDOMElements = () => {
     $question = document.body.querySelector(".question"); 
@@ -46,6 +47,7 @@ const startGame = () => {
             $question.innerHTML = questions[i].question;
             $firstAnswerBtn.innerHTML = questions[i].firstAnswer;
             $secondAnsweBtn.innerHTML = questions[i].secondAnswer;
+            shuffleAnswer()
         }
     }
     
@@ -53,6 +55,24 @@ const startGame = () => {
         endGame();
     }
 }
+
+const shuffleAnswer = () => {
+    const min = 0;
+    const max = 3;
+    const firstRandom = (Math.floor(Math.random() * (max - min)) + min);
+    const secondRandom = (Math.floor(Math.random() * (max - min)) + min);
+    const secondAnswer = document.body.querySelector(".answerSecond");
+
+    if (firstRandom == secondRandom){
+        secondAnswer.style.order = "-1"
+    }
+    else{
+        secondAnswer.style.order = "0";
+    }
+
+
+}
+
 
 const endGame = () => {
             $question.innerHTML = `Twój wynik to: ${$points} / 5`;
@@ -81,8 +101,11 @@ const resetButtons = () => {
     $nextBtn.innerHTML = "dalej";
 }
 
+
 const whichButtonWasClicked = (e) => {
-        if (e.target.closest("button").classList.contains("answerFirst") ){
+
+        
+    if (e.target.closest("button").classList.contains("answerFirst") ){
             e.target.closest("button").classList.toggle("choosedBtn");
             e.target.closest("button").classList.toggle("btn");
             $secondAnsweBtn.classList.remove("choosedBtn");
@@ -94,28 +117,35 @@ const whichButtonWasClicked = (e) => {
             $firstAnswerBtn.classList.remove("choosedBtn");
             $firstAnswerBtn.classList.add("btn");
         }
+
 }
 
-const checkAnswer = () => {
+const checkAnswer = (e) => {
+
+
     if ($firstAnswerBtn.classList.contains("choosedBtn")){
         $counter++;
         $points++;
-        $firstAnswerBtn.style.backgroundColor = "rgba(11, 175, 60, 0.815)";
+        $firstAnswerBtn.style.backgroundColor = $goodAnswerColor;
         showNextQuestion();
     }
     else if ($secondAnsweBtn.classList.contains("choosedBtn")){
         $counter++;
-        $secondAnsweBtn.style.backgroundColor = "rgba(201, 18, 18, 0.582)";
+        $secondAnsweBtn.style.backgroundColor = $badAnswerColor;
         showNextQuestion();
     }
 
-    
+
+
+
 }
 
 const showNextQuestion = () => {
     $checkBtn.style.display = "none";
     $nextBtn.style.display = "block";
 }
+
+
 
 const main = () => {
     prepareDOMElements();
