@@ -8,7 +8,7 @@ body {
 //main quiz class
 .quiz {
     top: 40%;
-    width: 85vw;
+    width: 90vw;
     height: 50vh;
 
     //wrapper for questions and anwers
@@ -18,7 +18,7 @@ body {
 
     // quiz questions
     .question {
-        font-size: 1rem;
+        font-size: .8rem;
         padding: 0 .33rem;
     }
 
@@ -31,9 +31,9 @@ body {
     // change some properties for anwer buttons
     .btn,
     .choosedBtn {
-        font-size: .8rem;
+        font-size: .6rem;
         padding: .1rem;
-        width: 32vw;
+        width: 38vw;
         height: 9vh;
         margin-bottom: .83rem;
     }

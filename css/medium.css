@@ -4,7 +4,7 @@ body {
 
 .quiz {
   top: 40%;
-  width: 85vw;
+  width: 90vw;
   height: 50vh;
 }
 
@@ -13,7 +13,7 @@ body {
 }
 
 .quiz .question {
-  font-size: 1rem;
+  font-size: .8rem;
   padding: 0 .33rem;
 }
 
@@ -29,9 +29,9 @@ body {
 
 .quiz .btn,
 .quiz .choosedBtn {
-  font-size: .8rem;
+  font-size: .6rem;
   padding: .1rem;
-  width: 32vw;
+  width: 38vw;
   height: 9vh;
   margin-bottom: .83rem;
 }

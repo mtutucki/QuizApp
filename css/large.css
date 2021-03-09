@@ -3,19 +3,20 @@ body {
 }
 
 .quiz {
-  height: 45vh;
+  height: 48vh;
+  width: 80vw;
 }
 
 .quiz .question {
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
 .quiz .btn,
 .quiz .choosedBtn,
 .quiz .chknxtBtn {
-  font-size: .6rem;
-  height: 10vh;
-  width: 29vw;
+  font-size: .8rem;
+  height: 9vh;
+  width: 31vw;
 }
 
 .quiz .chknxtBtn {

@@ -55,17 +55,23 @@ const showNextQuestion = () => {
 // if user choose god answer then button style = good answer = green
 // if user choose bad answer then button style = bad answer = red
 // then call out showNextQuestion function
+// if user doesn't click answer then show message - choose answer
 const checkAnswer = (e) => {
     if ($firstAnswerBtn.classList.contains("choosedBtn")){
         $counter++;
         $points++;
         $firstAnswerBtn.style.backgroundColor = $goodAnswerColor;
+        $secondAnsweBtn.disabled = true;
         showNextQuestion();
     }
     else if ($secondAnsweBtn.classList.contains("choosedBtn")){
         $counter++;
         $secondAnsweBtn.style.backgroundColor = $badAnswerColor;
+        $firstAnswerBtn.disabled = true;
         showNextQuestion();
+    }
+    else if (!$firstAnswerBtn.classList.contains("choosedBtn") || !$secondAnsweBtn.classList.contains("choosedBtn")){
+        $checkBtn.innerHTML = "Wybierz odpowiedź";
     }
 }
 
@@ -90,6 +96,8 @@ const shuffleAnswer = () => {
 
 // when user click next question then are of styles has to be reset to default
 const resetButtons = () => {
+    $secondAnsweBtn.disabled = false;
+    $firstAnswerBtn.disabled = false;
     $firstAnswerBtn.classList.remove("choosedBtn");
     $firstAnswerBtn.classList.add("btn");
     $firstAnswerBtn.style.backgroundColor = "";
@@ -105,7 +113,7 @@ const resetButtons = () => {
 
 // set text inside button to "try again" and reset counter and points
 const endGameButton = () => {
-    $nextBtn.innerHTML = "Spróbuj jeszcze raz";
+    $nextBtn.innerHTML = "Spróbuj ponownie";
     $counter = 0;
     $points = 0;
 }
@@ -133,8 +141,8 @@ const startGame = () => {
     }
     const firstQuiz = new Quiz("Najlepszy klub w Premier League?", "Manchester United", "Arsenal Londyn");
     const secondQuiz = new Quiz("JavaScript jest językiem typowanym", "dynamicznie!", "Statycznie");
-    const thirdQuiz = new Quiz("Jak nazywa się trzeci odcinek gry o tron", "lord snow","Winter is coming");
-    const fourthQuiz = new Quiz("Najnowsza produkcja studia CD PROJECT RED", "cyberpunk 2077", "Wiedźmin 3");
+    const thirdQuiz = new Quiz("Jak nazywa się trzeci odcinek gry o tron?", "lord snow","Winter is coming");
+    const fourthQuiz = new Quiz("Najnowsza produkcja studia CD PROJECT RED?", "cyberpunk 2077", "Wiedźmin 3");
     const fifthQuiz = new Quiz("W którym roku zatonął titanic?", "1912", "1921")
 
     const questions = [firstQuiz,secondQuiz,thirdQuiz,fourthQuiz,fifthQuiz];
